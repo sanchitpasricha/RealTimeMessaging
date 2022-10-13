@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
-      setMessages(snapshot.docs.map(doc => ({id: doc.id,message: doc.data()})))
+      setMessages(snapshot.docs.map(doc => ({id: doc.id, message: doc.data()})))
     })
   }, [] )
   
@@ -40,18 +40,19 @@ function App() {
   return (
     <div className="App">
 
-      <img src="https://cdn-icons-png.flaticon.com/512/2548/2548881.png?w=200&h=200"/>
-      <h1>Hello {username}</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/2548/2548881.png?w=100&h=100"/>
+      <h2>Hello Chatters</h2>
+      <h4>Hello {username}</h4>
 
       <form className="app_form">
-        <FormControl>
-        <InputLabel>Enter your message here</InputLabel>
-        <Input value={input} onChange={event => setInput(event.target.value)}/>
-        
-        </FormControl>
-        <IconButton>
+        <FormControl className="app_FormControl">
+        {/* <InputLabel>Enter your message here</InputLabel> */}
+        <Input className="app__input" placeholder={"Enter your message"} value={input} onChange={event => setInput(event.target.value)}/>
+        <IconButton className="app__iconButton">
           <SendIcon disabled={!input} variant="contained" color="primary" type="submit" onClick={sendMessage}/>
         </IconButton>
+        </FormControl>
+        
       </form>
       
       <FlipMove>{

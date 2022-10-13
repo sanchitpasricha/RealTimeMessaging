@@ -2,14 +2,32 @@
   text-align: center;
 }
 
+.App img{
+  width: 100px;
+  height: 100px;
+}
+
 .app_form{
-  padding: 10px;
+  padding: 20px;
   position: fixed;
   bottom: 0;
   z-index: 1;
   background-color: rgba(235, 235, 235, 0.9);
-  border: solid rgb(24, 96, 189) 1px;
-  width: 95%;
-  margin: 0 2rem;
-  border-radius: 50px;
+  /* border: solid rgb(24, 96, 189) 1px; */
+  width: 98%;
+  margin:  auto;
+  /* border-radius: 50px; */
+}
+
+.app_FormControl{
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.app_iconButton{
+  flex: 0;
+}
+
+.app__input{
+  flex: 1;
 }
