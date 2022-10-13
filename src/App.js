@@ -7,6 +7,7 @@ import db from "./firebase";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import FlipMove from "react-flip-move";
 
 function App() {
   const [input, setInput] = useState('');
@@ -15,7 +16,7 @@ function App() {
 
   useEffect(() => {
     db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
-      setMessages(snapshot.docs.map(doc => doc.data()))
+      setMessages(snapshot.docs.map(doc => ({id: doc.id,message: doc.data()})))
     })
   }, [] )
   
@@ -37,8 +38,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello coders 🚀</h1>
-      <h2>Hello {username}</h2>
+
+      <img src="https://cdn-icons-png.flaticon.com/512/2548/2548881.png?w=200&h=200"/>
+      <h1>Hello {username}</h1>
 
       <form>
         <FormControl>
@@ -48,11 +50,11 @@ function App() {
         </FormControl>
         <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={sendMessage}>Send message</Button>
       </form>
-      {
-        messages.map((message) => {
-          return <Message username={username} message={message}></Message>
+      <FlipMove>{
+        messages.map(({message, id}) => {
+          return <Message key={id} username={username} message={message}></Message>
         })
-      }
+      }</FlipMove>
     </div>
   );
 }
