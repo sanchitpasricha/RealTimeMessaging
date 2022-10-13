@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import { FormControl, Input, InputLabel } from '@mui/material';
 import Message from "./Message";
 import './App.css';
@@ -8,6 +8,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import FlipMove from "react-flip-move";
+import SendIcon from '@mui/icons-material/Send';
 
 function App() {
   const [input, setInput] = useState('');
@@ -42,14 +43,17 @@ function App() {
       <img src="https://cdn-icons-png.flaticon.com/512/2548/2548881.png?w=200&h=200"/>
       <h1>Hello {username}</h1>
 
-      <form>
+      <form className="app_form">
         <FormControl>
         <InputLabel>Enter your message here</InputLabel>
         <Input value={input} onChange={event => setInput(event.target.value)}/>
         
         </FormControl>
-        <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={sendMessage}>Send message</Button>
+        <IconButton>
+          <SendIcon disabled={!input} variant="contained" color="primary" type="submit" onClick={sendMessage}/>
+        </IconButton>
       </form>
+      
       <FlipMove>{
         messages.map(({message, id}) => {
           return <Message key={id} username={username} message={message}></Message>
