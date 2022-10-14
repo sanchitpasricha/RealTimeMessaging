@@ -1,0 +1,34 @@
+[debug] [2022-10-14T12:31:27.598Z] ----------------------------------------------------------------------
+[debug] [2022-10-14T12:31:27.599Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2022-10-14T12:31:27.599Z] CLI Version:   11.14.2
+[debug] [2022-10-14T12:31:27.599Z] Platform:      darwin
+[debug] [2022-10-14T12:31:27.599Z] Node Version:  v16.17.1
+[debug] [2022-10-14T12:31:27.600Z] Time:          Fri Oct 14 2022 18:01:27 GMT+0530 (India Standard Time)
+[debug] [2022-10-14T12:31:27.600Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-14T12:31:27.641Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-14T12:31:27.641Z] > authorizing via signed-in user (sanchit0229@gmail.com)
+[debug] [2022-10-14T12:31:27.641Z] [iam] checking project messenger-33b6e for permissions ["firebase.projects.get"]
+[debug] [2022-10-14T12:31:27.642Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/messenger-33b6e:testIamPermissions [none]
+[debug] [2022-10-14T12:31:27.642Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/messenger-33b6e:testIamPermissions x-goog-quota-user=projects/messenger-33b6e
+[debug] [2022-10-14T12:31:27.642Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/messenger-33b6e:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-14T12:31:29.249Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/messenger-33b6e:testIamPermissions 200
+[debug] [2022-10-14T12:31:29.249Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/messenger-33b6e:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-14T12:31:29.250Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/messenger-33b6e [none]
+[debug] [2022-10-14T12:31:30.014Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/messenger-33b6e 200
+[debug] [2022-10-14T12:31:30.015Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/messenger-33b6e {"projectId":"messenger-33b6e","projectNumber":"1091126096618","displayName":"Messenger","name":"projects/messenger-33b6e","resources":{"hostingSite":"messenger-33b6e","storageBucket":"messenger-33b6e.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_d900ccb8-4137-4c36-8cb9-75c48cf92a0e"}
+[info] 
+[info] === Serving from '/Users/sanchitpasricha/Projects and Materials/WebProjects/react-apps/messenger'...
+[info] 
+[debug] [2022-10-14T12:31:30.020Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/messenger-33b6e/sites 
+[debug] [2022-10-14T12:31:31.492Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/messenger-33b6e/sites 200
+[debug] [2022-10-14T12:31:31.492Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/messenger-33b6e/sites {"sites":[{"name":"projects/messenger-33b6e/sites/messenger-33b6e","defaultUrl":"https://messenger-33b6e.web.app","appId":"1:1091126096618:web:cde0daf1024a5309259d93","type":"DEFAULT_SITE"}]}
+[debug] [2022-10-14T12:31:31.493Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/messenger-33b6e/webApps/1:1091126096618:web:cde0daf1024a5309259d93/config [none]
+[debug] [2022-10-14T12:31:33.034Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/messenger-33b6e/webApps/1:1091126096618:web:cde0daf1024a5309259d93/config 200
+[debug] [2022-10-14T12:31:33.034Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/messenger-33b6e/webApps/1:1091126096618:web:cde0daf1024a5309259d93/config {"projectId":"messenger-33b6e","appId":"1:1091126096618:web:cde0daf1024a5309259d93","storageBucket":"messenger-33b6e.appspot.com","locationId":"us-central","apiKey":"AIzaSyBvCWln5_cmfbXNrMqzUoexLCid7LpKDgg","authDomain":"messenger-33b6e.firebaseapp.com","messagingSenderId":"1091126096618","measurementId":"G-YC5DG3S4ZZ"}
+[debug] [2022-10-14T12:31:33.041Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/messenger-33b6e [none]
+[debug] [2022-10-14T12:31:33.548Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/messenger-33b6e 200
+[debug] [2022-10-14T12:31:33.549Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/messenger-33b6e {"projectId":"messenger-33b6e","projectNumber":"1091126096618","displayName":"Messenger","name":"projects/messenger-33b6e","resources":{"hostingSite":"messenger-33b6e","storageBucket":"messenger-33b6e.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_d900ccb8-4137-4c36-8cb9-75c48cf92a0e"}
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port... {"metadata":{"emulator":{"name":"hosting"},"message":"\u001b[33mhosting: \u001b[39mPort 5000 is not available. Trying another port..."}}
+[info] i  hosting[messenger-33b6e]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting[messenger-33b6e]: Local server: http://localhost:5005 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5005\u001b[22m\u001b[24m"}}
