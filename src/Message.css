@@ -5,20 +5,19 @@
     text-align: left;
 }
 
-.message_guestCard p{
-    color: grey;
-    font-size: 0.8rem;
+.message .body{
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 .message_guestCard .body{
     color: black;
-    font-weight: 700;
-    font-size: 1rem;
 }
 
-.message_userCard body{
-    font-weight: 700;
-    font-size: 1rem;
+.head{
+    color: grey;
+    font-weight: 600;
+    font-size: 0.8rem;
 }
 
 .message_user{
