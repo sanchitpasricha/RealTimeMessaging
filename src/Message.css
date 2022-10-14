@@ -1,7 +1,24 @@
 .message{
-    /* padding: 1px; */
+    padding: -20px;
     margin: 10px;
     width: fit-content;
+    text-align: left;
+}
+
+.message_guestCard p{
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.message_guestCard .body{
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.message_userCard body{
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 .message_user{
@@ -11,7 +28,7 @@
 }
 
 .message_userCard{
-    background-color: rgb(24, 96, 189) !important;
+    background-color: rgb(9, 72, 154) !important;
     color: white !important;
 }
 

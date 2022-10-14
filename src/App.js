@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="App">
 
-      <img src="https://cdn-icons-png.flaticon.com/512/2548/2548881.png?w=100&h=100"/>
+      <img alt = "" src="https://cdn-icons-png.flaticon.com/512/2548/2548881.png?w=100&h=100"/>
       <h2>Hello Chatters</h2>
       <h4>Hello {username}</h4>
 
