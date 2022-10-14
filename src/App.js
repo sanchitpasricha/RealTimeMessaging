@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Button, IconButton } from "@mui/material";
-import { FormControl, Input, InputLabel } from '@mui/material';
+import { IconButton } from "@mui/material";
+import { FormControl, Input } from '@mui/material';
 import Message from "./Message";
 import './App.css';
 import db from "./firebase";
